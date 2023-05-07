@@ -1,0 +1,14 @@
+//show on sidebar
+& .hidden-on-collapsed {
+  transform-origin: left center;
+  transition: all $sidebar-transition-time;
+}
+//hide on collapsed sidebar
+&.collapsed {
+  & .hidden-on-collapsed {
+    scale: 0 0;
+    overflow: hidden;
+    transform-origin: left center;
+    transition: all $sidebar-transition-time;
+  }
+}

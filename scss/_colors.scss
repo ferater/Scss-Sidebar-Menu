@@ -1,0 +1,31 @@
+$light: (
+  "body-bg-top": #82baed,
+  "body-bg-bottom": #a1eddf,
+  "surface": #ffffff,
+  "surface-rgb": "255,255,255",
+  "text": #000000,
+  "text-rgb": "0,0,0",
+);
+$dark: (
+  "body-bg-top": #82baed,
+  "body-bg-bottom": #a1eddf,
+  "surface": #000000,
+  "surface-rgb": "0,0,0",
+  "text": #ffffff,
+  "text-rgb": "255,255,255",
+);
+
+body {
+  --body-bg-top: #{map-get($map: $light, $key: "body-bg-top")};
+  --body-bg-bottom: #{map-get($map: $light, $key: "body-bg-bottom")};
+  --surface: #{map-get($map: $light, $key: "surface")};
+  --text: #{map-get($map: $light, $key: "text")};
+  --text-rgb: #{map-get($map: $light, $key: "text-rgb")};
+}
+body.dark {
+  --body-bg-top: #{map-get($map: $dark, $key: "body-bg-top")};
+  --body-bg-bottom: #{map-get($map: $dark, $key: "body-bg-bottom")};
+  --surface: #{map-get($map: $dark, $key: "surface")};
+  --text: #{map-get($map: $dark, $key: "text")};
+  --text-rgb: #{map-get($map: $dark, $key: "text-rgb")};
+}

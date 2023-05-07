@@ -1,0 +1,43 @@
+& footer {
+  width: $user-profile-width;
+  height: $user-profile-hegiht;
+  background-color: $user-profile-bg-color;
+  border-radius: $user-profile-border-radius;
+  bottom: $user-profile-border-position-bottom;
+  transition: all $sidebar-transition-time;
+  & .user-profile {
+    padding-left: $brand-padding-left;
+    //user avatar
+    & .user-avatar {
+      width: $user-avatar-width;
+      height: $user-avatar-height;
+      margin-right: $brand-logo-margin-right;
+      border: $user-avatar-border-width solid $user-avatar-border-color;
+      border-radius: $user-avatar-border-radius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: scale $transition-time;
+      & img {
+        width: calc($user-avatar-width - $user-avatar-border-width);
+        height: calc($user-avatar-height - $user-avatar-border-width);
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
+    //brand text
+    & .user-info {
+      & .user-name {
+        font-weight: $brand-text-weight;
+        font-size: $brand-text-font-size;
+        line-height: $brand-text-line-height;
+      }
+      & .proffession {
+        font-weight: $user-profession-font-weight;
+        font-size: $user-profession-font-size;
+        line-height: $user-profession-line-height;
+        color: var(--text);
+      }
+    }
+  }
+}

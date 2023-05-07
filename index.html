@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Sidebar Menu</title>
+</head>
+
+<body class="dark">
+    <div class="container">
+        <aside class="sidebar fixed">
+            <header>
+                <div class="brand flex align-center">
+                    <div class="brand-logo scale-on-collapsed">
+                        <img src="assets/svg/Frame.svg" alt="brand-logo">
+                    </div>
+                    <div class="brand-header-text hidden-on-collapsed">
+                        <h3>TECNOLOGY </h3>
+                    </div>
+                    <div class="sidebar-toggle-button absolute flex align-center justify-center cursor-pointer">
+                        <iconify-icon icon="material-symbols:arrow-back-ios-rounded"
+                            class="sidebar-toggler-icon"></iconify-icon>
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <ul class="navigation">
+                    <!-- single link (Dashboard) -->
+                    <li class="navigation-item flex align-center">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:dashboard-outline"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Dashboard</span>
+                            <div class="navigation-tooltip absolute flex align-center">
+                                <span class="navigation-link-text tooltip-text hover-tooltip">Dashboard</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- expandable link (Products) -->
+                    <li class="navigation-item expandable relative">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:arrow-right"
+                                class="expand-icon absolute hidden-on-collapsed"></iconify-icon>
+                            <iconify-icon icon="material-symbols:shopping-bag-outline"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Products</span>
+                        </a>
+                        <!-- sub navigation for Products -->
+                        <ul class="sub-navigation">
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Product 1</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Product 2</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Product 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- expandable link (Messages) -->
+                    <li class="navigation-item expandable relative">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:arrow-right"
+                                class="expand-icon absolute hidden-on-collapsed"></iconify-icon>
+                            <iconify-icon icon="material-symbols:mark-email-unread-outline"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Messages</span>
+                        </a>
+                        <!-- sub navigation for Messages -->
+                        <ul class="sub-navigation">
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Message 1</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Message 2</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Message 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- expandable link (Activities) -->
+                    <li class="navigation-item expandable relative">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:arrow-right"
+                                class="expand-icon absolute hidden-on-collapsed"></iconify-icon>
+                            <iconify-icon icon="material-symbols:fitbit-hourly-activity-rounded"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Activities</span>
+                        </a>
+                        <!-- sub navigation for Activities -->
+                        <ul class="sub-navigation">
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Activity 1</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Activity 2</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Activity 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- expandable link (Statistics) -->
+                    <li class="navigation-item expandable relative">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:arrow-right"
+                                class="expand-icon absolute hidden-on-collapsed"></iconify-icon>
+                            <iconify-icon icon="material-symbols:bar-chart-4-bars"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Statistics</span>
+                        </a>
+                        <!-- sub navigation for Statistics -->
+                        <ul class="sub-navigation">
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Statistic 1</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Statistic 2</span>
+                                </a>
+                            </li>
+                            <li class="sub-navigation-item">
+                                <a href="#" class="navigation-link sub-navigation-link hover-tooltip flex align-center">
+                                    <span class="navigation-link-text">Statistic 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- single link (Calendar) -->
+                    <li class="navigation-item flex align-center">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:calendar-month-outline"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Calendar</span>
+                            <div class="navigation-tooltip absolute flex align-center">
+                                <span class="navigation-link-text tooltip-text hover-tooltip">Calendar</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- horizontal seperator -->
+            <div class="horizontal-seperator"></div>
+            <nav>
+                <ul class="navigation">
+                    <!-- single link (Chat) -->
+                    <li class="navigation-item flex align-center">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:chat-outline"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Chat</span>
+                            <div class="navigation-tooltip absolute flex align-center">
+                                <span class="navigation-link-text tooltip-text hover-tooltip">Chat</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- single link (Setting) -->
+                    <li class="navigation-item flex align-center">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:settings-outline"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Setting</span>
+                            <div class="navigation-tooltip absolute flex align-center">
+                                <span class="navigation-link-text tooltip-text hover-tooltip">Setting</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- single link (Logout) -->
+                    <li class="navigation-item flex align-center">
+                        <a href="#" class="navigation-link hover-link flex align-center">
+                            <iconify-icon icon="material-symbols:logout-rounded"
+                                class="navigation-link-icon scale-on-collapsed"></iconify-icon>
+                            <span class="navigation-link-text hidden-on-collapsed">Logout</span>
+                            <div class="navigation-tooltip absolute flex align-center">
+                                <span class="navigation-link-text tooltip-text hover-tooltip">Logout</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="absolute">
+                <!-- theme switch button -->
+                <div class="theme-swticher">
+                    <label for="switch">
+                        <input type="checkbox" name="" id="switch" checked data-theme-switcher>
+                        <div class="switch"></div>
+                    </label>
+                </div>
+                <!-- horizontal seperator -->
+                <div class="horizontal-seperator"></div>
+                <div class="user-profile flex">
+                    <div class="user-avatar">
+                        <img src="assets/img/john.jpg" alt="user-avatar">
+                    </div>
+                    <div class="user-info hidden-on-collapsed">
+                        <h3 class="user-name">John DOE</h3>
+                        <span class="proffession">J.doe2541@gmail.com</span>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+        <main class="content"></main>
+    </div>
+</body>
+
+</html>

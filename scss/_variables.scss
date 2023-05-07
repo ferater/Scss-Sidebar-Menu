@@ -1,0 +1,122 @@
+//body
+$body-height: 100vh;
+$body-font-family: "Inter", sans-serif;
+$body-bg-angle: 180deg;
+
+//container
+$container-width: 100%;
+$container-height: 100%;
+
+//sidebar
+$sidebar-width: 16rem;
+$sidebar-height: 98%;
+$sidebar-bg-color: var(--surface);
+$sidebar-border-radius: 2rem;
+$sidebar-padding-y: 1.5rem;
+$sidebar-padding-x: 0;
+//sidebar collapsed
+$sidebar-collapsed-width: calc($sidebar-width * 0.40625);
+
+//============= brand ==============
+$brand-padding-left: $sidebar-padding-y;
+$brand-padding-bottom: 1rem;
+//brand logo
+$brand-logo-width: 3.3rem;
+$brand-logo-height: 3.3rem;
+$brand-logo-margin-right: 1rem;
+//brand text
+$brand-text-weight: 700;
+$brand-text-font-size: 1.1rem;
+$brand-text-line-height: 1.5rem;
+//===================================
+//=====sidebar toggle button=========
+$sidebar-toggle-button-width: 0.8rem;
+$sidebar-toggle-button-height: 2rem;
+$sidebar-toggle-button-bg-color: var(--text);
+$sidebar-toggle-button-position-right: 0;
+$sidebar-toggle-button-border-radius: 0.25rem 0 0 0.25rem;
+//sidebar toggle button icon
+$sidebar-toggle-button-icon-size: 0.75rem;
+$sidebar-toggle-button-icon-color: var(--surface);
+//===================================
+
+//=====navigation====================
+//navigation item
+$navigation-item-height: 2.5rem;
+$navigation-item-padding-left: 2.5rem;
+//navigation link icon
+$navigation-link-icon-margin-right: 1.5rem;
+$navigation-link-icon-size: 1.375rem;
+//navigation link text
+$navigation-link-text-color: var(--text);
+$navigation-link-text-wieght: 600;
+$navigation-link-text-size: 1rem;
+$navigation-link-text-line-height: 1.625rem;
+//hover on link
+$navigation-link-hover-bg-color: rgba(
+  $color: var(--text-rgb),
+  $alpha: 0.4,
+);
+//navigation tooltip
+$navigation-tooltip-height: $navigation-item-height;
+$navigation-tooltip-bg-color: var(--surface);
+$navigation-tooltip-padding-y: 0;
+$navigation-tooltip-padding-x: 1rem;
+$navigation-tooltip-border-radius: 0 0.5rem 0.5rem 0;
+//set navigation tooltip state
+$show-tooltip: true;
+$show-tooltip-arrow: true;
+$navigation-tooltip-arrow-size: 0.625rem;
+$navigation-tooltip-arrow-color: var(--surface);
+//====================================
+
+//=====sub navigation ================
+$sub-navigation-expand-icon-size: 1.5rem;
+$sub-navigation-expand-icon-left: 1rem;
+$sub-navigation-bg-color: rgba(var(--text-rgb), 0.1);
+$sub-navigation-inset: 0 calc($sidebar-width * 0.4);
+$sub-navigation-item-height: 1.75rem;
+//sub navigation on collapsed sidebar
+$sub-navigation-padding-y: 1rem;
+$sub-navigation-padding-x: 0;
+$sub-navigation-link-height: 100%;
+$sub-navigation-link-padding-y: 0;
+$sub-navigation-link-padding-x: 1.5rem;
+//======================================
+
+//=====horizontal seperator ============
+$horizontal-sperator-width: 100%;
+$horizontal-sperator-height: 2px;
+$horizontal-sperator-color: var(--text);
+$horizontal-sperator-margin-y: 0.75rem;
+$horizontal-sperator-margin-x: 0;
+//======================================
+
+//=====user profile ====================
+$user-profile-width: 100%;
+$user-profile-hegiht: 5rem;
+$user-profile-bg-color: var(--surface);
+$user-profile-border-radius: 0 0 $sidebar-border-radius $sidebar-border-radius;
+$user-profile-border-position-bottom: 0;
+//user avatar
+$user-avatar-width: 3rem;
+$user-avatar-height: 3rem;
+$user-avatar-border-width: 2px;
+$user-avatar-border-color: var(--text);
+$user-avatar-border-radius: 50%;
+//user name (same as bran text)
+//user proffession
+$user-profession-font-weight: 500;
+$user-profession-font-size: 0.675rem;
+$user-profession-line-height: 1.125rem;
+//========================================
+//=======theme switcher===================
+$switch-width: 2.5rem;
+$switch-height: 1.125rem;
+$switch-bg-color: var(--text);
+
+//========================================
+
+//=====effects=====
+$transition-time: 0.3s;
+$sidebar-transition-time: 0.5s;

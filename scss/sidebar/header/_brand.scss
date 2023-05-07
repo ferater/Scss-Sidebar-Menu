@@ -1,0 +1,45 @@
+& header {
+  & .brand {
+    padding-left: $brand-padding-left;
+    padding-bottom: $brand-padding-bottom;
+    //brand logo
+    & .brand-logo {
+      width: $brand-logo-width;
+      height: $brand-logo-height;
+      margin-right: $brand-logo-margin-right;
+      & img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+      }
+    }
+    //brand text
+    & .brand-header-text {
+      & h3 {
+        font-weight: $brand-text-weight;
+        font-size: $brand-text-font-size;
+        line-height: $brand-text-line-height;
+      }
+    }
+    //sidebar toggle button
+    & .sidebar-toggle-button {
+      width: $sidebar-toggle-button-width;
+      height: $sidebar-toggle-button-height;
+      background-color: $sidebar-toggle-button-bg-color;
+      right: $sidebar-toggle-button-position-right;
+      border-radius: $sidebar-toggle-button-border-radius;
+      & .sidebar-toggler-icon {
+        font-size: $sidebar-toggle-button-icon-size;
+        color: $sidebar-toggle-button-icon-color;
+        translate: 2px;
+        transition: all $transition-time;
+      }
+      &:hover {
+        & .sidebar-toggler-icon {
+          scale: 1.1;
+          translate: 0;
+        }
+      }
+    }
+  }
+}

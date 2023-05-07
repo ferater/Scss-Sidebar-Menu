@@ -1,0 +1,33 @@
+//icons
+iconify-icon {
+  color: var(--text);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}

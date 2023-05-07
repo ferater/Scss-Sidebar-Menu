@@ -1,0 +1,31 @@
+//expandable navigation item
+&.expandable {
+  overflow: hidden;
+  transition: all $transition-time;
+  //expandable navigation expand icon
+  & .expand-icon {
+    font-size: $sub-navigation-expand-icon-size;
+    left: $sub-navigation-expand-icon-left;
+    transform-origin: center;
+    transition: all $transition-time;
+  }
+  //sub navigation
+  & .sub-navigation {
+    background-color: $sub-navigation-bg-color;
+    & .sub-navigation-item {
+      height: $sub-navigation-item-height;
+      transition: all $transition-time;
+      & .sub-navigation-link {
+        height: $sub-navigation-item-height;
+        padding: $sub-navigation-inset;
+        white-space: nowrap;
+      }
+    }
+  }
+  //rotate expand icon when sub menu expanded
+  &.expanded {
+    & .expand-icon {
+      rotate: 90deg;
+    }
+  }
+}

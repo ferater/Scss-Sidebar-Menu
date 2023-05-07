@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  font-size: 16px;
+}
+body {
+  height: $body-height;
+  font-family: $body-font-family;
+  background: linear-gradient(
+    $body-bg-angle,
+    var(--body-bg-top),
+    var(--body-bg-bottom)
+  );
+}
+.container {
+  width: $container-width;
+  height: $container-height;
+  display: grid;
+  grid-template-areas: "sidebar content";
+  grid-template-columns: auto 1fr;
+  & .sidebar {
+    grid-area: sidebar;
+    //temp css for sidebar
+    top: 50%;
+    left: 2rem;
+    translate: 0 -50%;
+  }
+  & .content {
+    grid-area: content;
+  }
+}
+
+@import "sidebar/sidebar";
+@import "switch";

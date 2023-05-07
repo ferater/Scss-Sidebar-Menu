@@ -1,0 +1,11 @@
+.horizontal-seperator {
+  width: $horizontal-sperator-width;
+  height: $horizontal-sperator-height;
+  background: linear-gradient(
+    to right,
+    transparent,
+    $horizontal-sperator-color,
+    transparent
+  );
+  margin: $horizontal-sperator-margin-y $horizontal-sperator-margin-x;
+}

@@ -1,0 +1,42 @@
+& nav {
+  //navigation
+  & .navigation {
+    & .navigation-item {
+      height: $navigation-item-height;
+      //navigation link
+      & .navigation-link {
+        width: 100%;
+        height: $navigation-item-height;
+        padding-left: $navigation-item-padding-left;
+        color: $navigation-link-text-color;
+        & .navigation-link-icon {
+          font-size: $navigation-link-icon-size;
+          margin-right: $navigation-link-icon-margin-right;
+        }
+        & .navigation-link-text {
+          display: inline-block;
+          font-weight: $navigation-link-text-wieght;
+          font-size: $navigation-link-text-size;
+          line-height: $navigation-link-text-line-height;
+        }
+      }
+      //expandable navigation item
+      //sub navigation
+      @import "sub-navigation";
+      & .hover-tooltip {
+        color: rgba($color: var(--text-rgb), $alpha: 0.5);
+        transition: color $transition-time;
+        &:hover {
+          color: rgba($color: var(--text-rgb), $alpha: 1);
+        }
+      }
+      //hover on link
+      & .hover-link:not(.collapsed .expandable a) {
+        transition: background-color $transition-time;
+        &:hover {
+          background-color: $navigation-link-hover-bg-color;
+        }
+      }
+    }
+  }
+}

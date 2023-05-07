@@ -1,0 +1,30 @@
+//navigation-tooltip for collapsed sidebar
+.navigation-tooltip {
+  height: $navigation-tooltip-height;
+  background-color: $navigation-tooltip-bg-color;
+  border-radius: $navigation-tooltip-border-radius;
+  left: $sidebar-collapsed-width;
+  scale: 0 1;
+  transform-origin: left center;
+  transition: scale $transition-time;
+  & .tooltip-text {
+    padding: $navigation-tooltip-padding-y $navigation-tooltip-padding-x;
+    color: var(--text);
+    font-weight: $navigation-link-text-wieght;
+    font-size: $navigation-link-text-size;
+    line-height: $navigation-link-text-line-height;
+    white-space: nowrap;
+  }
+  //navigation tooltip arrow (can be set in variables)
+  @if ($show-tooltip-arrow) {
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: calc(($navigation-tooltip-arrow-size * 2) * -1);
+      border: $navigation-tooltip-arrow-size solid transparent;
+      border-right-color: $navigation-tooltip-arrow-color;
+    }
+  }
+}

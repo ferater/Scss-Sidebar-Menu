@@ -1,0 +1,39 @@
+$switch-ball-width: calc($switch-height * 0.75);
+$switch-ball-height: calc($switch-height * 0.75);
+$switch-ball-bg-color: var(--surface);
+$switch-ball-left: calc($switch-height / 10);
+label {
+  & input#switch {
+    display: none;
+    &:checked ~ .switch::after {
+      left: calc(($switch-width - $switch-ball-width) - $switch-ball-left);
+    }
+  }
+  & .switch {
+    width: $switch-width;
+    height: $switch-height;
+    background-color: $switch-bg-color;
+    border-radius: calc($switch-height / 2);
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::after {
+      content: "";
+      width: $switch-ball-width;
+      height: $switch-ball-height;
+      background-color: $switch-ball-bg-color;
+      border-radius: $switch-ball-height;
+      position: absolute;
+      left: $switch-ball-left;
+      transition: left $transition-time;
+    }
+  }
+}
+.theme-swticher {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 5.5rem;
+}

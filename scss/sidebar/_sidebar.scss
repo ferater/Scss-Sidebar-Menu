@@ -1,0 +1,25 @@
+.sidebar {
+  width: $sidebar-width;
+  height: $sidebar-height;
+  background-color: $sidebar-bg-color;
+  border-radius: $sidebar-border-radius;
+  padding: $sidebar-padding-y $sidebar-padding-x;
+  transition: all $sidebar-transition-time;
+  overflow: hidden;
+  //header (header contains brand logo & brand text)
+  @import "header/brand";
+  //nav (nav includes navigation links)
+  @import "nav/navigation";
+  //sidebar collapsed
+  @import "sidebar-collapsed";
+  //hide text on collapsed sidebar
+  @import "hidden-on-collapsed";
+  //scale logo & icons on collapsed sidebar
+  @import "scale-on-collapsed";
+  //navigation tooltip on collapsed sidebar
+  @import "nav/navigation-tooltip";
+  //horizontal seperator
+  @import "horizontal-seperator";
+  //footer (footer includes user profile)
+  @import "footer";
+}

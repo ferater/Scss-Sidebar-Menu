@@ -1,0 +1,82 @@
+&.collapsed {
+  width: $sidebar-collapsed-width;
+  overflow: visible;
+  //rotate toggle button on collapsed sidebar
+  & header {
+    & .brand {
+      & .sidebar-toggle-button {
+        & .sidebar-toggler-icon {
+          translate: -2px;
+          rotate: 180deg;
+        }
+      }
+    }
+  }
+  & nav {
+    & .navigation {
+      & .navigation-item {
+        &.expandable {
+          overflow: visible;
+          & .sub-navigation {
+            background-color: var(--surface);
+            padding: $sub-navigation-padding-y $sub-navigation-padding-x;
+            border-radius: $navigation-tooltip-border-radius;
+            position: absolute;
+            top: calc($sub-navigation-padding-y * -1);
+            left: $sidebar-collapsed-width;
+            scale: 0 1;
+            transform-origin: left center;
+            & .sub-navigation-item {
+              height: $navigation-item-height;
+              & .sub-navigation-link {
+                height: $sub-navigation-link-height;
+                padding: $sub-navigation-link-padding-y
+                  $sub-navigation-link-padding-x;
+              }
+              //sub menu arrow on collapsed sidebar (can be set in variables)
+              @if ($show-tooltip-arrow) {
+                &:first-child {
+                  position: relative;
+                  &::after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 50%;
+                    translate: 0 -50%;
+                    left: calc(($navigation-tooltip-arrow-size * 2) * -1);
+                    border: $navigation-tooltip-arrow-size solid transparent;
+                    border-right-color: $navigation-tooltip-arrow-color;
+                  }
+                }
+              }
+            }
+          }
+          //show sub menu on collapsed sidebar
+          &:hover {
+            background-color: $navigation-link-hover-bg-color;
+            & .sub-navigation {
+              scale: 1 1;
+              transition: scale $transition-time;
+            }
+          }
+        }
+        //show tooltip on collapsed sidebar
+        @if ($show-tooltip) {
+          &:hover {
+            & .navigation-tooltip {
+              scale: 1 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  & footer {
+    & .user-profile {
+      & .user-avatar {
+        scale: 1.2;
+      }
+    }
+  }
+}

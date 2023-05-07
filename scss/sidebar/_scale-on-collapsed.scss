@@ -1,0 +1,12 @@
+//scale icons to normal on collapsed sidebar
+.scale-on-collapsed {
+  scale: 1;
+  transition: scale $sidebar-transition-time;
+}
+//scale icons to 1.2x on collapsed sidebar
+&.collapsed {
+  .scale-on-collapsed {
+    scale: 1.2;
+    transition: scale $sidebar-transition-time;
+  }
+}
